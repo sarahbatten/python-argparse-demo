@@ -48,6 +48,14 @@ if __name__ == '__main__':
         help = 'A boolean option.',
     )
 
+    # Adding an optional keyword argument
+    parser.add_argument(
+        '-q', '--quiet',
+        default = False,
+        action = print("Shh. Be vewy, vewy quiet, I'm hunting wabbits...")
+        help = 'A boolean option.',
+    )
+
     # Parse the command-line arguments into a 'dict'-like container
     args = parser.parse_args()
 
